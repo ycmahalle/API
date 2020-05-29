@@ -10,33 +10,20 @@ class RegisterController extends Controller
     public function insert(Request $request)
     {
 
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $contact = $request->input('contact');
-        $password =  $request->input('password');
-        $this->validate($request, [
-            'email' => 'required',
-            'contact' => 'required |numeric',
-            'password' => 'required |min:8 | confirmed'
+        // $name = $request->input('name');
+        // $email = $request->input('email');
+        // $contact = $request->input('contact');
+        // $password =  $request->input('password');
+        // $this->validate($request, [
+        //     'email' => 'required',
+        //     'contact' => 'required |numeric',
+        //     'password' => 'required |min:8 | confirmed'
 
-        ]);
+        // ]);
 
         // DB::insert('INSERT INTO register (name,email,contact,password) values(?,?,?,?)',[$name,$email,$contact,$password]);
 
         // echo 'data inserted successfully';
 
-            $users= DB::table('register')
-             ->where([
-                 'email'=>'$eail',
-                 
-             ]);
-            @if(count($users) > 0)
-             $success='user already registered';
-             @else
-        $users = DB::table('register')
-            -> ,
-
-            ]);
-           
-    }     
-}
+        }
+    }
